@@ -24,35 +24,35 @@ const Blog = ({ data }) => {
         />
       ))} */}
       <Container>
-      <form method="POST" data-netlify="true" name="cover-letter-form">
+      <form method="POST" action="/" data-netlify="true" name="cover-letter-form">
 
       {/* <input type="hidden" name="cover-letter-form" value="cover-letter-form" /> */}
 
       <p>Your First Name:</p>  
-      <input type="text" name="firstname" id="firstname" required />
+      <input type="text" name="firstname" required />
 
       <p>Your Last Name:</p>  
-      <input type="text" name="lastname" id="lastname" required />
+      <input type="text" name="lastname" required />
 
       <p>What is the title of the job you are applying for?</p>  
-      <input type="text" name="targetjobtitle" id="targetjobtitle" required />
+      <input type="text" name="targetjobtitle" required />
 
       <p>What is the name of the company?</p>  
-      <input type="text" name="targetcompany" id="targetcompany" required />
+      <input type="text" name="targetcompany" required />
 
       <p>What are your top 3 relevant skills?</p>
       <p>Skill 1:</p>  
-      <input type="text" name="skillone" id="skillone" required />
+      <input type="text" name="skillone" required />
 
       <p>Skill 2:</p>  
-      <input type="text" name="skilltwo" id="skilltwo" required />
+      <input type="text" name="skilltwo" required />
 
       <p>Skill 3:</p>  
-      <input type="text" name="skillthree" id="skillthree" required />
+      <input type="text" name="skillthree" required />
 
-  <h3>   
+  <p>   
   <button type="submit">Create Letter</button>
-  </h3>
+  </p>
 
 </form>
 </Container>
