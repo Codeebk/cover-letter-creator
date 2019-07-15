@@ -25,11 +25,14 @@ const Blog = ({ data }) => {
       ))} */}
       <Container>
       <form method="post" action="#" data-netlify="true" name="contact">
+
+      <input type="hidden" name="cover-letter-form" value="cover-letter" />
+
       <p>Your First Name:</p>  
-      <input type="text" name="firstname" value="" />
+      <input type="text" name="firstname" value="" required />
 
       <p>Your Last Name:</p>  
-      <input type="text" name="lastname" value="" />
+      <input type="text" name="lastname" value="" required />
 
       <p>What is the title of the job you are applying for?</p>  
       <input type="text" name="targetjobtitle" value="" required />
