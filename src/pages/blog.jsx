@@ -3,7 +3,8 @@ import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import { Header, BlogList } from 'components';
-import { Layout } from 'layouts';
+import { Layout, Container } from 'layouts';
+
 
 const Blog = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
@@ -11,7 +12,7 @@ const Blog = ({ data }) => {
     <Layout>
       <Helmet title={'Blog Page'} />
       <Header title="Create Input form">Answer the following questions to generate a cover letter</Header>
-      {edges.map(({ node }) => (
+      {/* {edges.map(({ node }) => (
         <BlogList
           key={node.id}
           cover={node.frontmatter.cover.childImageSharp.fluid}
@@ -21,7 +22,39 @@ const Blog = ({ data }) => {
           tags={node.frontmatter.tags}
           excerpt={node.excerpt}
         />
-      ))}
+      ))} */}
+      <Container>
+      <form method="post" action="#" data-netlify="true" name="contact">
+      <p>Your First Name:</p>  
+      <input type="text" name="firstname" value="" />
+
+      <p>Your Last Name:</p>  
+      <input type="text" name="lastname" value="" />
+
+      <p>What is the title of the job you are applying for?</p>  
+      <input type="text" name="targetjobtitle" value="" required />
+
+      <p>What is the name of the company?</p>  
+      <input type="text" name="targetcompany" value="" required />
+
+      <p>What are your top 3 relevant skills?</p>
+      <p>Skill 1:</p>  
+      <input type="text" name="skillone" value="" required />
+
+      <p>Skill 2:</p>  
+      <input type="text" name="skilltwo" value="" required />
+
+      <p>Skill 3:</p>  
+      <input type="text" name="skillthree" value="" required />
+
+  <h3>   
+  <input type="submit" value="Create Letter" />
+  </h3>
+
+</form>
+</Container>
+
+    
     </Layout>
   );
 };
