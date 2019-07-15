@@ -24,9 +24,9 @@ const Blog = ({ data }) => {
         />
       ))} */}
       <Container>
-      <form method="POST" action="#" data-netlify="true" name="cover-letter-form">
+      <form method="POST" data-netlify="true" name="cover-letter-form">
 
-      <input type="hidden" name="cover-letter-form" value="cover-letter-form" />
+      {/* <input type="hidden" name="cover-letter-form" value="cover-letter-form" /> */}
 
       <p>Your First Name:</p>  
       <input type="text" name="firstname" id="firstname" required />
@@ -51,7 +51,7 @@ const Blog = ({ data }) => {
       <input type="text" name="skillthree" id="skillthree" required />
 
   <h3>   
-  <input type="submit" value="Create Letter" />
+  <button type="submit">Create Letter</button>
   </h3>
 
 </form>
