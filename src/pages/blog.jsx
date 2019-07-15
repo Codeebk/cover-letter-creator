@@ -24,7 +24,7 @@ const Blog = ({ data }) => {
         />
       ))} */}
       <Container>
-      <form method="post" action="#" data-netlify="true" name="contact">
+      <form method="post" action="#" data-netlify="true" name="cover-letter-form">
 
       <input type="hidden" name="cover-letter-form" value="cover-letter" />
 
