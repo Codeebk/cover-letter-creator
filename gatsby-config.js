@@ -13,6 +13,14 @@ module.exports = {
         name: 'posts',
         path: `${__dirname}/content/posts`,
       },
+      
+    },
+    {
+      resolve: 'gatsby-plugin-create-client-paths',
+      options: {
+        prefixes: [`/app/*`]
+      },
+      
     },
     'gatsby-transformer-sharp',
     {
