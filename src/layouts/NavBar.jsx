@@ -33,9 +33,12 @@ const NavBar = () => (
       <img src={logo} alt="Gatsby Logo" />
     </StyledLink>
     <Nav>
+      {/* <span>You are not logged in</span> */}
       <Link to="/">Home</Link>
       <Link to="/blog">Blog</Link>
       <Link to="/about">About</Link>
+      {/* <Link to="/">Logout</Link> */}
+      <div data-netlify-identity-button>Login with Netlify Identity</div>
     </Nav>
   </Headroom>
 );
