@@ -38,7 +38,7 @@ const NavBar = () => (
       <Link to="/blog">Blog</Link>
       <Link to="/about">About</Link>
       {/* <Link to="/">Logout</Link> */}
-      <div data-netlify-identity-button>Login with Netlify Identity</div>
+      <div data-netlify-identity-button>Login</div>
     </Nav>
   </Headroom>
 );
