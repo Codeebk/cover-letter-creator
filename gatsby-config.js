@@ -8,6 +8,12 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     {
+      resolve: `gatsby-plugin-netlify-identity`,
+      options: {
+        url: `https://your-identity-instance-here.netlify.com/` // required!
+      }
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'posts',

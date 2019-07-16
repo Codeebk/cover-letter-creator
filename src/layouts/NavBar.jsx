@@ -3,6 +3,8 @@ import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import Headroom from 'react-headroom';
 import logo from '../../static/logo/header-logo.png';
+import IdentityModal, { useIdentityContext } from "react-netlify-identity-widget"
+
 
 const StyledLink = styled(Link)`
   display: flex;
@@ -27,7 +29,16 @@ const Nav = styled.nav`
   }
 `;
 
-const NavBar = () => (
+const NavBar = () => {
+  const identity = useIdentityContext()
+  const [dialog, setDialog] = React.useState(false)
+  const name =
+    (identity && identity.user && identity.user.user_metadata && identity.user.user_metadata.name) || "NoName"
+
+  console.log(JSON.stringify(identity))
+  const isLoggedIn = identity && identity.isLoggedIn
+
+return (
   <Headroom calcHeightOnResize disableInlineStyles>
     <StyledLink to="/">
       <img src={logo} alt="Gatsby Logo" />
@@ -38,9 +49,13 @@ const NavBar = () => (
       <Link to="/blog">Blog</Link>
       <Link to="/about">About</Link>
       {/* <Link to="/">Logout</Link> */}
-      <Link onClick={netlifyIdentity.open()}>Login</Link>
+      <button className="btn" onClick={() => setDialog(true)}>
+          {isLoggedIn ? `Hello ${name}, Log out here!` : "LOG IN"}
+        </button>
+        <IdentityModal showDialog={dialog} onCloseDialog={() => setDialog(false)} />
     </Nav>
   </Headroom>
-);
+)
+}
 
 export default NavBar;
