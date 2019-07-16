@@ -15,13 +15,13 @@ module.exports = {
       },
       
     },
-    // {
-    //   resolve: 'gatsby-plugin-create-client-paths',
-    //   options: {
-    //     prefixes: [`/app/*`]
-    //   },
+    {
+      resolve: 'gatsby-plugin-create-client-paths',
+      options: {
+        url: 'https://cover-letter-creator.netlify.com/.netlify/identity'
+      },
       
-    // },
+    },
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
